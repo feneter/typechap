@@ -3,7 +3,7 @@ import math
 
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import QTimer
-from PyQt5.QtWidgets import QWidget,QApplication,QPushButton,QGridLayout,QLabel,QVBoxLayout,QGroupBox,QHBoxLayout
+from PyQt5.QtWidgets import QWidget,QApplication,QPushButton,QGridLayout,QLabel,QVBoxLayout,QGroupBox,QHBoxLayout, QMessageBox
 
 from timer import Timer
 from exercise import exercise
@@ -58,6 +58,12 @@ class MainApp(QWidget):
             self.label = QLabel("mm:ss",self)
         return self.label
     
+    def keyPressEvent(self, QKeyEvent):
+        if QKeyEvent.key() == 16777216: # Escape
+            print("Escape key pressed")
+            QMessageBox(self)#, "Confirm to exit", "Are you sure you want to quit?")
+        # return super().keyPressEvent(self, QKeyEvent)
+
     # @property
     def get_play_pause_btn(self):
         try:

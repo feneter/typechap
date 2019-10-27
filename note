@@ -1,0 +1,11 @@
+focus => so we can capture all keyboard events. either focus by pressing Tab or Clicking or Both
+keyPressEvent => on keyPress, determine which key is pressed
+grabKeyboard => for the widget to get all 
+
+
+Character class: data class container to hold all characters
+Keyboard class: all methods and properties for the model keyboard
+Exercise class: holds all info about an Exercise
+ExcerciseStatus enum: enum to hold exercises status.
+ExerciseDisplayArea class: this is the class where we need to control keyboard events
+MainApp class: this the class that has the main layout for the app and contains all controls
